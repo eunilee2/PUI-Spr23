@@ -22,4 +22,4 @@ You'll be able to add your code to your own repository and have it be visible in
 
 You can find all in-class example in this repository.
 - [All lecture examples](./in-lecture-examples/)
-- [All lab examples](./in-lab-examples/)
+- [All lab examples](./in-lab-examples/index.html)
