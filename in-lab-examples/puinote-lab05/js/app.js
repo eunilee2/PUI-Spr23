@@ -35,7 +35,7 @@ for (const notecard of notecardSet){
 function createElement(notecard){
     console.log('Creating an Element!');
     const template=document.querySelector('#notecard-template');
-    const clone=template.textContent.cloneNode(true);
+    const clone=template.content.cloneNode(true);
     notecard.element=clone.querySelector('.notecard');
 
     const btnDelete=notecard.element.querySelector('.icon-delete');
