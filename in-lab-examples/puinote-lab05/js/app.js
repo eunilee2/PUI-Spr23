@@ -38,6 +38,11 @@ function createElement(notecard){
     const clone=template.textContent.cloneNode(true);
     notecard.element=clone.querySelector('.notecard');
 
+    const btnDelete=notecard.element.querySelector('.icon-delete');
+    btnDelete.addEventListener('click',()=>{
+        deleteNote(notecard);
+    });
+
     const notecardListElement=document.querySelector('#notecard-list');
     notecardListElement.prepend(notecard.element);
     updateElement(notecard);
@@ -50,4 +55,9 @@ function updateElement(notecard){
     noteImageElement.src=notecard.noteImageURL;
     noteTitleElement.innerText=notecard.noteTitle;
     noteBodyElement.innerText=notecard.noteBody;
+}
+
+function deleteNote(notecard){
+    notecard.element.remove();
+    notecardSet.delete(notecard);
 }
