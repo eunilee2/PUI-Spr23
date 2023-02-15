@@ -44,54 +44,54 @@
 
       <div id="notecard-list">
 
-
-          <div class="notecard expanded">
-            
-            <div class="notecard-left">
+        <template id="notecard-template">
+            <div class="notecard expanded">
               
-              <div class="notecard-main-content">
-                <img class="notecard-thumbnail" src="assets/warhol-zebra.png"/>
-                <div class="notecard-text">
-                  <div class="note-title-container">
-                    <div class="note-title">
-                      Placeholder Title
+              <div class="notecard-left">
+                
+                <div class="notecard-main-content">
+                  <img class="notecard-thumbnail" src="assets/warhol-zebra.png"/>
+                  <div class="notecard-text">
+                    <div class="note-title-container">
+                      <div class="note-title">
+                        Placeholder Title
+                      </div>
+                    </div>
+                    <div class="note-body">
+                      Here is some placeholder body text.
                     </div>
                   </div>
-                  <div class="note-body">
-                    Here is some placeholder body text.
+                </div>
+
+                <div class="notecard-footer">
+                  Aug 8 2022, 11:09
+                </div>
+
+              </div> <!-- END notecard-left -->
+
+
+              <div class="notecard-right">
+
+                <div class="icon icon-expand material-symbols-outlined">
+                  expand_more
+                </div>
+                <div class="icon icon-collapse material-symbols-outlined">
+                  expand_less
+                </div>
+
+                <div class="toolbar">
+                  <div class="material-symbols-outlined icon icon-edit">
+                    edit
+                  </div>
+                  <div class="material-symbols-outlined icon icon-delete">
+                    delete
                   </div>
                 </div>
-              </div>
-
-              <div class="notecard-footer">
-                Aug 8 2022, 11:09
-              </div>
-
-            </div> <!-- END notecard-left -->
+              </div> <!-- END notecard-right -->
 
 
-            <div class="notecard-right">
-
-              <div class="icon icon-expand material-symbols-outlined">
-                expand_more
-              </div>
-              <div class="icon icon-collapse material-symbols-outlined">
-                expand_less
-              </div>
-
-              <div class="toolbar">
-                <div class="material-symbols-outlined icon icon-edit">
-                  edit
-                </div>
-                <div class="material-symbols-outlined icon icon-delete">
-                  delete
-                </div>
-              </div>
-            </div> <!-- END notecard-right -->
-
-
-          </div> <!-- END notecard -->
-
+            </div> <!-- END notecard -->
+        </template>
 
 
       </div> <!-- END notecard-list -->
@@ -132,9 +132,9 @@
 
       </div> <!-- END note-editor -->
 
-
+      
     </div> <!-- END container -->
 
-
+    
   </body>
 </html>
