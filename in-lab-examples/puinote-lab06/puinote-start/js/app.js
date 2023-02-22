@@ -35,6 +35,16 @@ function retrieveFromLocalStorage(){
   const notecardArrayString=localStorage.getItem('storedNotes');
   const notecardArray=JSON.parse(notecardArrayString);
   console.log(notecardArray);
+
+  for(const noteData of notecardArray){
+    const notecard=addNewNote(noteData.noteImageURL, noteData.noteTitle,
+      noteData.noteBody);
+    createElement(notecard);
+  }
+}
+
+if (localStorage.getItem('storedNotes')!=Null){
+  retrieveFromLocalStorage();
 }
 
 // This function creates a new Notecard object, and adds it to notecardSet.
@@ -92,6 +102,8 @@ function deleteNote(notecard) {
 
   // remove the actual Notecard object from our set of notecards
   notecardSet.delete(notecard);
+
+  saveToLocalStorage();
 }
 
 
