@@ -21,6 +21,22 @@ class Notecard {
 // Set.delete(item) function.
 const notecardSet = new Set();
 
+function saveToLocalStorage(){
+  const notecardArray=Array.from(notecardSet);
+  console.log(notecardArray);
+
+  const notecardArrayString=JSON.stringify(notecardArray);
+  console.log(notecardArrayString);
+
+  localStorage.setItem('storedNotes', notecardArrayString);
+}
+
+function retrieveFromLocalStorage(){
+  const notecardArrayString=localStorage.getItem('storedNotes');
+  const notecardArray=JSON.parse(notecardArrayString);
+  console.log(notecardArray);
+}
+
 // This function creates a new Notecard object, and adds it to notecardSet.
 function addNewNote(imageURL, title, body) {
   // Create a new notecard object. The Notecard constructor takes three
@@ -95,4 +111,5 @@ function submitNote() {
   createElement(notecard);
 
   console.log("Submitted Note!")
+  saveToLocalStorage();
 }
