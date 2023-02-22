@@ -43,7 +43,7 @@ function retrieveFromLocalStorage(){
   }
 }
 
-if (localStorage.getItem('storedNotes')!=Null){
+if (localStorage.getItem('storedNotes')!=null){
   retrieveFromLocalStorage();
 }
 
