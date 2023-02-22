@@ -82,6 +82,17 @@ function deleteNote(notecard) {
 /**** EXERCISE 6 CODE BELOW ***************************************************/
 
 function submitNote() {
-  // Nothing here yet!
+  const noteEditorTitle=document.querySelector('#note-editor-title');
+  const editorTitleText=noteEditorTitle.value;
+
+  const noteEditorBody=document.querySelector('#note-editor-body');
+  const editorBodyText=noteEditorBody.value;
+
+  const noteEditorImage=document.querySelector('#note-editor-image');
+  const editorImageURL=noteEditorImage.src;
+
+  const notecard=addNewNote(editorImageURL, editorTitleText, editorBodyText);
+  createElement(notecard);
+
   console.log("Submitted Note!")
 }
